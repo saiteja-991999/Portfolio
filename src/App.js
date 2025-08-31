@@ -19,7 +19,7 @@ const Card = ({
   link,
   linkText,
 }) => (
-  <div className="bg-[#112240] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
+  <div className="bg-[#112240] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 hover:bg-gradient-to-br hover:from-[#0a192f] hover:to-[#112240]">
     {image && (
       <img
         src={image}
@@ -27,7 +27,9 @@ const Card = ({
         className="w-full aspect-video object-cover rounded-xl mb-4"
       />
     )}
-    <h3 className="text-xl font-bold text-[#64ffda]">{title}</h3>
+    <h3 className="text-xl font-bold text-[#64ffda] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#64ffda] hover:to-[#14b8a6] transition duration-300">
+      {title}
+    </h3>
     {period && <p className="text-gray-400 text-sm">{period}</p>}
     <p className="text-gray-300 mt-2">{description}</p>
     {tags && (
@@ -35,7 +37,7 @@ const Card = ({
         {tags.map((tag, idx) => (
           <span
             key={idx}
-            className="px-3 py-1 bg-[#0a192f] text-[#64ffda] rounded-full text-sm"
+            className="px-3 py-1 bg-[#0a192f] text-[#64ffda] rounded-full text-sm hover:bg-gradient-to-r hover:from-[#64ffda] hover:to-[#14b8a6] hover:text-white transition duration-300"
           >
             {tag}
           </span>
@@ -47,7 +49,7 @@ const Card = ({
         href={link}
         target="_blank"
         rel="noreferrer"
-        className="text-[#64ffda] mt-3 inline-block"
+        className="text-[#64ffda] mt-3 inline-block hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#64ffda] hover:to-[#14b8a6] transition duration-300"
       >
         {linkText} →
       </a>
@@ -76,14 +78,14 @@ export default function App() {
       title: "Accenture | AEM Developer",
       period: "Jan 2025 – Present",
       description:
-        "Working on Bank of America project to reduce deployment efforts using AEM, creating dialogs with HTL, XML, and improving content authoring efficiency.",
+        "Working on Bank project to reduce deployment efforts using AEM, creating dialogs with HTL, XML, and improving content authoring efficiency.",
       tags: ["AEM", "HTL", "JS"],
     },
     {
       title: "TCS | AEM Developer",
       period: "Mar 2023 – Dec 2024",
       description:
-        "Worked on telecom client project, enhancing authoring efficiency, building scalable AEM components, and optimizing deployment workflows.",
+        "Worked on a telecom client project, enhancing authoring efficiency, building scalable AEM components, and optimizing deployment workflows.",
       tags: ["AEM", "Dialog XML", "Frontend"],
     },
     {
@@ -179,7 +181,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-5xl font-extrabold"
+            className="text-4xl md:text-5xl font-extrabold hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#64ffda] hover:to-[#14b8a6] transition duration-500"
           >
             Sai Teja
           </motion.h1>
@@ -206,7 +208,7 @@ export default function App() {
                   duration={700}
                   offset={-100}
                   activeClass="text-[#64ffda] font-bold"
-                  className="cursor-pointer text-base md:text-lg tracking-widest uppercase transition-colors duration-300 hover:text-[#64ffda]"
+                  className="cursor-pointer text-base md:text-lg tracking-widest uppercase transition-colors duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#64ffda] hover:to-[#14b8a6]"
                 >
                   {sec}
                 </Link>
@@ -222,7 +224,7 @@ export default function App() {
         >
           <a
             href="mailto:saiteja991999@gmail.com"
-            className="hover:text-[#64ffda]"
+            className="hover:text-[#64ffda] transition duration-300"
           >
             <FaEnvelope />
           </a>
@@ -230,7 +232,7 @@ export default function App() {
             href="https://linkedin.com/in/sai-teja-604827154"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#64ffda]"
+            className="hover:text-[#64ffda] transition duration-300"
           >
             <FaLinkedin />
           </a>
@@ -238,7 +240,7 @@ export default function App() {
             href="https://github.com/saiteja-991999"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#64ffda]"
+            className="hover:text-[#64ffda] transition duration-300"
           >
             <FaGithub />
           </a>
@@ -252,12 +254,14 @@ export default function App() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="md:hidden w-full bg-gradient-to-r from-[#0a192f] via-[#0f2340] to-[#112240] p-6 flex flex-col items-center space-y-4 shadow-md mb-6"
       >
-        <h1 className="text-3xl font-extrabold text-white">Sai Teja</h1>
+        <h1 className="text-3xl font-extrabold text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#64ffda] hover:to-[#14b8a6] transition duration-500">
+          Sai Teja
+        </h1>
         <h2 className="text-base text-[#64ffda]">Front-End & AEM Developer</h2>
         <div className="flex space-x-6 text-xl mt-2">
           <a
             href="mailto:saiteja991999@gmail.com"
-            className="hover:text-[#64ffda] text-white"
+            className="hover:text-[#64ffda] text-white transition duration-300"
           >
             <FaEnvelope />
           </a>
@@ -265,7 +269,7 @@ export default function App() {
             href="https://linkedin.com/in/sai-teja-604827154"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#64ffda] text-white"
+            className="hover:text-[#64ffda] text-white transition duration-300"
           >
             <FaLinkedin />
           </a>
@@ -273,7 +277,7 @@ export default function App() {
             href="https://github.com/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#64ffda] text-white"
+            className="hover:text-[#64ffda] text-white transition duration-300"
           >
             <FaGithub />
           </a>
@@ -281,7 +285,7 @@ export default function App() {
             href="https://instagram.com/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#64ffda] text-white"
+            className="hover:text-[#64ffda] text-white transition duration-300"
           >
             <FaInstagram />
           </a>

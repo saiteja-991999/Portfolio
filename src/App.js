@@ -61,7 +61,7 @@ export default function App() {
 
   const articlesData = [
     {
-      image: "/assets/react-virtualized.png",
+      image: "/assets/react-virtualized.jpg",
       alt: "React Virtualized Guide",
       title: "React-Virtualized Guide for Beginners",
       description: "An easy guide to improve app performance by rendering only visible items with react-virtualized.",
@@ -69,7 +69,7 @@ export default function App() {
       linkText: "Read More"
     },
     {
-      image: "/assets/useeffect-vs-uselayouteffect.png",
+      image: "/assets/useeffect-vs-uselayouteffect.jpg",
       alt: "useEffect vs useLayoutEffect",
       title: "useEffect vs useLayoutEffect",
       description: "Detailed comparison of useEffect and useLayoutEffect hooks with real-world examples.",
@@ -80,7 +80,7 @@ export default function App() {
 
   const projectsData = [
     {
-      image: "/assets/photography-app.png",
+      image: "/assets/photography-app.jpg",
       alt: "Photography App",
       title: "Photography App",
       description: "A portfolio-style photography application built using React and modern CSS.",
@@ -88,7 +88,7 @@ export default function App() {
       linkText: "Visit Site"
     },
     {
-      image: "/assets/wordle-game.png",
+      image: "/assets/wordle-game.jpg",
       alt: "Wordle Game",
       title: "Wordle Game",
       description: "A fun Wordle clone built with React, complete with animations and game state management.",

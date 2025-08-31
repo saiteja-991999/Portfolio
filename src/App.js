@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const SectionHeading = ({ title }) => (
   <h2 className="text-3xl font-semibold md:hidden sticky top-0 text-white bg-gradient-to-r from-[#0a192f] via-[#0f2340] to-[#112240] py-3">
@@ -274,20 +274,12 @@ export default function App() {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/"
+            href="https://github.com/saiteja-991999"
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#64ffda] text-white transition duration-300"
           >
             <FaGithub />
-          </a>
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-[#64ffda] text-white transition duration-300"
-          >
-            <FaInstagram />
           </a>
         </div>
       </motion.header>
